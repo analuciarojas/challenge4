@@ -76,6 +76,57 @@
 
 /* END START PAGE CONTENT STYLE */
 
+/* QUESTION STYLE */
+
+#question {
+    font-size: 40px;
+    padding-left: 100px;
+    text-align: left;
+}
+
+.questions-list li {
+    padding-left: 100px;
+}
+
+#answer1, #answer2, #answer3, #answer4 {
+    background-color: var(--purple);
+    border-radius: 12px;
+    color:white;
+    padding:12px 28px;
+    font-size: 17px;
+}
+
+#answer1:hover , #answer2:hover, #answer3:hover, #answer4:hover {
+    background-color: var(--light-purple);
+}
 
 
+/* END QUESTION STYLE */
 
+/* ALL DONE SECTION STYLE */
+
+#final-score h2 {
+    font-size: 50px;
+    padding-left: 300px;
+    text-align: left;
+}
+
+#final-score p {
+    font-size: 25px;
+    padding-left: 300px;
+    text-align: left;
+}
+
+#final-score button {
+    background-color: var(--purple);
+    border-radius: 30px;
+    color:white;
+    padding:12px 28px;
+    font-size: 17px;
+}
+
+#final-score button:hover {
+    background-color: var(--light-purple);
+}
+
+/* ALL DONE SECTION END */

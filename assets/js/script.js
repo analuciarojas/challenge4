@@ -2,7 +2,7 @@ const questions = [
     {
         question: "Commonly used data types DO Not Include:",
         answer: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
-        correctAnswer: "3. alerts"
+        correctAnswercorrectAnswer: "3. alerts"
     },
     {
         question: "The condition in an if / else statement is enclosed with ____.",
@@ -27,7 +27,6 @@ const questions = [
 ];
 /*
 
-const rightWrong = document.querySelector("#answer-message");
 let scoreList = document.querySelector(".scorelist");
 let scoreArray = [];
 const answB = document.querySelectorAll("button.answer-b")
@@ -51,9 +50,16 @@ var answ2 = document.querySelector("#answer2");
 var answ3 = document.querySelector("#answer3");
 var answ4 = document.querySelector("#answer4");
 var questionS=document.querySelector("#question");
+let viewScrBtn = document.querySelector("#view-scores");
+const answB = document.querySelectorAll("button.answer-b")
+const rightWrong = document.querySelector("#answer-message");
 
 
 
+
+finalScore.style.display = "none";
+highscores.style.display = "none";
+questionSection.style.display = "none";
 
 
 function hidingSections() {
@@ -67,17 +73,15 @@ function hidingSections() {
 };
 
 function setQuestion(id) {
-    while(id<4)
-    {
-        if (id < questions.length) {
-            questionS.textContent = questions[id].question;
-            answ1.textContent = questions[id].answer[0];
-            answ2.textContent = questions[id].answer[1];
-            answ3.textContent = questions[id].answer[2];
-            answ4.textContent = questions[id].answer[3];
-        }
-    };
-    
+    viewScrBtn.style.display = "none";
+
+    if (id < questions.length) {
+        questionS.textContent = questions[id].question;
+        answ1.textContent = questions[id].answer[0];
+        answ2.textContent = questions[id].answer[1];
+        answ3.textContent = questions[id].answer[2];
+        answ4.textContent = questions[id].answer[3];
+    }    
 }
 
 function setTime() {
@@ -94,13 +98,6 @@ function setTime() {
     }, 1000);
 }
 
-start.addEventListener("click", hidingSections);
-
-
-
-/*
-
-
 function checkAnswer(event) {
     event.preventDefault();
 
@@ -114,9 +111,7 @@ function checkAnswer(event) {
 
     if (questions[questionCount].correctAnswer === event.target.value) {
         p.textContent = "Correct!";
-    } 
-   
-    else if (questions[questionCount].correctAnswer !== event.target.value) {
+    }  else if (questions[questionCount].correctAnswer !== event.target.value) {
         secondsLeft = secondsLeft - 10;
         p.textContent = "Wrong!";
     }
@@ -126,6 +121,18 @@ function checkAnswer(event) {
     }
     setQuestion(questionCount);
 }
+
+start.addEventListener("click", hidingSections);
+
+answB.forEach(item => {
+    item.addEventListener('click', checkAnswer);
+});
+
+
+/*
+
+
+
 
 function addScore(event) {
     event.preventDefault();
@@ -175,9 +182,7 @@ function clearScores() {
 */
 
 
-/*answB.forEach(item => {
-    item.addEventListener('click', checkAnswer);
-});
+/*
 
 submitScrBtn.addEventListener("click", addScore);
 
