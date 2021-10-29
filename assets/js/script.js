@@ -51,13 +51,6 @@ let clearScrBtn = document.querySelector("#clearScores");
 let goBackBtn = document.querySelector("#goBack");
 let initialsInput = document.querySelector("#initials");
 
-
-
-
-
-
-
-
 finalScore.style.display = "none";
 highscores.style.display = "none";
 questionSection.style.display = "none";
