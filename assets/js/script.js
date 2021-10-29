@@ -2,40 +2,30 @@ const questions = [
     {
         question: "Commonly used data types DO Not Include:",
         answer: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
-        correctAnswercorrectAnswer: "3. alerts"
+        correctAnswer: "2"
     },
     {
         question: "The condition in an if / else statement is enclosed with ____.",
         answer: ["1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"],
-        correctAnswer: "3. parenthesis"
+        correctAnswer: "2"
     },
     {
         question: "Arrays in JavaScript can be used to store ____.",
         answer: ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
-        correctAnswer: "4. all of the above"
+        correctAnswer: "3"
     },
     {
         question: "String values must be enclosed within ____ when being assigned to variables.",
         answer: ["1. commas", "2. curly brackets", "3. quotes", "4. parentheses"],
-        correctAnswer: "3. quotes"
+        correctAnswer: "2"
     },
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is ____.",
         answer: ["1. JavaScript", "2. terminal / bash ", "3. for loops", "4. console.log"],
-        correctAnswer: "4. console.log"
+        correctAnswer: "3"
     }
 ];
-/*
 
-let scoreList = document.querySelector(".scorelist");
-let scoreArray = [];
-const answB = document.querySelectorAll("button.answer-b")
-let submitScrBtn = document.querySelector("#submit-score");
-let clearScrBtn = document.querySelector("#clearScores");
-let viewScrBtn = document.querySelector("#view-scores");
-let goBackBtn = document.querySelector("#goBack");
-var Intro = document.querySelector("#intro");
-*/
 const Intro = document.querySelector(".intro");
 var start = document.querySelector("#start");
 const highscores = document.querySelector("#highscores");
@@ -53,6 +43,17 @@ var questionS=document.querySelector("#question");
 let viewScrBtn = document.querySelector("#view-scores");
 const answB = document.querySelectorAll("button.answer-b")
 const rightWrong = document.querySelector("#answer-message");
+var Line = document.querySelector("#hr");
+let submitScrBtn = document.querySelector("#submit-score");
+let scoreArray = [];
+let scoreList = document.querySelector(".scorelist");
+let clearScrBtn = document.querySelector("#clearScores");
+let goBackBtn = document.querySelector("#goBack");
+let initialsInput = document.querySelector("#initials");
+
+
+
+
 
 
 
@@ -81,7 +82,8 @@ function setQuestion(id) {
         answ2.textContent = questions[id].answer[1];
         answ3.textContent = questions[id].answer[2];
         answ4.textContent = questions[id].answer[3];
-    }    
+    }
+
 }
 
 function setTime() {
@@ -93,6 +95,8 @@ function setTime() {
             clearInterval(timerShown);
             questionSection.style.display = "none";
             finalScore.style.display = "block";
+            viewScrBtn.style.display = "block";
+            hr.style.display="none";
             score.textContent = secondsLeft;
         }
     }, 1000);
@@ -101,18 +105,23 @@ function setTime() {
 function checkAnswer(event) {
     event.preventDefault();
 
-    rightWrong.style.display = "block";
     let p = document.createElement("p");
-    rightWrong.appendChild(p);
+    var hr = document.createElement("HR");
 
     setTimeout(function () {
+        hr.style.display = 'none';
         p.style.display = 'none';
     }, 1000);
 
-    if (questions[questionCount].correctAnswer === event.target.value) {
+ 
+    if (questions[questionCount].correctAnswer == (event.target.value)) {
+        Line.appendChild(hr);
+        rightWrong.appendChild(p);
         p.textContent = "Correct!";
-    }  else if (questions[questionCount].correctAnswer !== event.target.value) {
+    }  else if (questions[questionCount].correctAnswer != (event.target.value)) {
         secondsLeft = secondsLeft - 10;
+        Line.appendChild(hr);
+        rightWrong.appendChild(p);
         p.textContent = "Wrong!";
     }
 
@@ -122,21 +131,11 @@ function checkAnswer(event) {
     setQuestion(questionCount);
 }
 
-start.addEventListener("click", hidingSections);
-
-answB.forEach(item => {
-    item.addEventListener('click', checkAnswer);
-});
-
-
-/*
-
-
-
-
 function addScore(event) {
     event.preventDefault();
 
+    time.style.display = "none";
+    viewScrBtn.style.display = "none";
     finalScore.style.display = "none";
     highscores.style.display = "block";
 
@@ -154,7 +153,7 @@ function addScore(event) {
       scoreList.innerHTML="";
     for (let i = 0; i < scoreArray.length; i++) {
         let li = document.createElement("li");
-        li.textContent = `${scoreArray[i].initials}: ${scoreArray[i].score}`;
+        li.textContent = `${scoreArray[i].initials} - ${scoreArray[i].score}`;
         scoreList.append(li);
     }
 
@@ -179,33 +178,31 @@ function clearScores() {
     scoreList.innerHTML="";
 } 
 
-*/
-
-
-/*
-
-submitScrBtn.addEventListener("click", addScore);
-
 goBackBtn.addEventListener("click", function () {
     highscores.style.display = "none";
     Intro.style.display = "block";
+    time.style.display = "block";
+    viewScrBtn.style.display = "block";
     secondsLeft = 75;
     time.textContent = `Time:${secondsLeft}s`;
 });
 
-clearScrBtn.addEventListener("click", clearScores);
 
 viewScrBtn.addEventListener("click", function () {
-    if (highscores.style.display === "none") {
         highscores.style.display = "block";
-    } 
-    else if (highscores.style.display === "block") {
-        highscores.style.display = "none";
-    } 
+        Intro.style.display = "none";
     
-    else {
-        return alert("Hey. Take Quiz. There is No High Score.");
-    }
 });
-*/
+
+start.addEventListener("click", hidingSections);
+
+answB.forEach(item => {
+    item.addEventListener('click', checkAnswer);
+});
+
+submitScrBtn.addEventListener("click", addScore);
+
+clearScrBtn.addEventListener("click", clearScores);
+
+
 

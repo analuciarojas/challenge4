@@ -39,38 +39,38 @@
     <div class="questions-section" id="questions">
                 <ul class="questions-list">
                     <h2 id="question">Question</h2>
-                    <li class="questions-li "><button id="answer1" type="button" class="answer-b">First Answer</button>
+                    <li class="questions-li "><button id="answer1" value="0" type="button" class="answer-b">First Answer</button>
                     </li>
-                    <li class="questions-li"><button id="answer2" type="button" class="answer-b">Second Answer</button>
+                    <li class="questions-li"><button id="answer2" value="1" type="button" class="answer-b">Second Answer</button>
                     </li>
-                    <li class="questions-li"><button id="answer3" type="button" class="answer-b">Fourth Answer</button>
+                    <li class="questions-li"><button id="answer3" value="2" type="button" class="answer-b">Fourth Answer</button>
                     </li>
-                    <li class="questions-li"><button id="answer4" type="button" class="answer-b">Fifth Answer</button>
+                    <li class="questions-li"><button id="answer4" value="3" type="button" class="answer-b">Fifth Answer</button>
                     </li>
                 </ul>
                 <div id="answer-message">
-                    <hr> 
+                <div id="hr">
+                </div>
                 </div>
     </div>
 
 
     <section id="final-score">
             <h2>All Done!</h2>
-            <p>Your final score is <span id="score">0</span></p>
+            <p>Your final score is <span id="score">0.</span></p>
             <p class="p-style-1">Enter initials:
-            <span class="initials-form"><input placeholder="initials" id="initials"></span>
+            <span class="initials-form"><input placeholder="INITIALS" id="initials"></span>
             <button id="submit-score" class="submit-score-btn btn-style-main">Submit</button>
             </p>
-            <hr>
     </section>
 
-    <section id="highscores">
-            <div class="style-3">
-                <p><h2>High Scores</h2></p>
-                <ol class="scorelist"></ol>
-                <button id="goBack" class="go-back-btn btn-style-main">Go Back</button>
-                <button id="clearScores" class="clear-scores-btn btn-style-main">Clear All Scores</button>
+    <section id="highscores" class="highscore-title">
+            <h2>High Scores</h2>
+            <div class="padding">
+            <ol class="scorelist"></ol>
             </div>
+            <button id="goBack" class="go-back-btn btn-style-main">Go Back</button>
+            <button id="clearScores" class="clear-scores-btn btn-style-main">Clear All Scores</button>
     </section>
 
 

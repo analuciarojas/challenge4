@@ -6,8 +6,8 @@
 }
 
 :root {
-    --purple: rgb(110, 19, 110);
-    --light-purple: rgb(218, 63, 218); 
+    --purple: rgb(81, 16, 94);
+    --light-purple: rgb(190, 172, 201); 
   }
 
 /* HEADER STYLE */
@@ -85,10 +85,12 @@
 }
 
 .questions-list li {
+    padding:4px;
     padding-left: 100px;
 }
 
 #answer1, #answer2, #answer3, #answer4 {
+    padding:4px;
     background-color: var(--purple);
     border-radius: 12px;
     color:white;
@@ -100,18 +102,39 @@
     background-color: var(--light-purple);
 }
 
+#hr{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-width: 3px;
+    width:70%;
+    color: grey;
+    text-align: center;
+}
+
+#answer-message {
+    color: grey;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 30px;
+
+
+
+}
 
 /* END QUESTION STYLE */
 
 /* ALL DONE SECTION STYLE */
 
 #final-score h2 {
+    padding:10px;
     font-size: 50px;
     padding-left: 300px;
     text-align: left;
 }
 
 #final-score p {
+    padding:10px;
     font-size: 25px;
     padding-left: 300px;
     text-align: left;
@@ -119,9 +142,9 @@
 
 #final-score button {
     background-color: var(--purple);
-    border-radius: 30px;
+    border-radius: 12px;
     color:white;
-    padding:12px 28px;
+    padding: 8px 40px;
     font-size: 17px;
 }
 
@@ -129,4 +152,63 @@
     background-color: var(--light-purple);
 }
 
+#initials {
+    width: 30%;
+    padding: 8px 40px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+
 /* ALL DONE SECTION END */
+
+/* HIGHSCORES STYLE */
+
+.highscore-title h2 {
+    font-size: 50px;
+}
+
+.highscore-title {
+    padding:10px;
+    padding-left: 300px;
+    text-align: left;
+}
+
+.highscore-title button {
+    background-color: var(--purple);
+    border-radius: 12px;
+    color:white;
+    padding: 8px 40px;
+    font-size: 17px;
+
+}
+
+.highscore-title button:hover {
+    background-color: var(--light-purple);
+}
+
+.highscore-title li {
+    background-color: var(--light-purple);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    color:black;
+}
+
+.highscore-title ol {
+    padding: 3px;
+    width: 80%;
+    padding-left: 20px;
+    background-color: var(--light-purple);
+}
+
+::marker{
+    padding-left: 30px;
+}
+
+.padding {
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+
+
+/* HIGHSCORES STYLE END */
