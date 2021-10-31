@@ -107,11 +107,11 @@ function checkAnswer(event) {
     }, 1000);
 
  
-    if (questions[questionCount].correctAnswer == (event.target.value)) {
+    if (questions[questionCount].correctAnswer === (event.target.value)) {
         Line.appendChild(hr);
         rightWrong.appendChild(p);
         p.textContent = "Correct!";
-    }  else if (questions[questionCount].correctAnswer != (event.target.value)) {
+    }  else if (questions[questionCount].correctAnswer !== (event.target.value)) {
         secondsLeft = secondsLeft - 10;
         Line.appendChild(hr);
         rightWrong.appendChild(p);
@@ -168,6 +168,8 @@ function displayScores() {
 
 function clearScores() {
     localStorage.clear();
+    scoreArray.length = 0
+    alert(scoreArray.length);
     scoreList.innerHTML="";
 } 
 
@@ -184,6 +186,7 @@ goBackBtn.addEventListener("click", function () {
 viewScrBtn.addEventListener("click", function () {
         highscores.style.display = "block";
         Intro.style.display = "none";
+        viewScrBtn.style.display = "none";
     
 });
 

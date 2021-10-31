@@ -14,17 +14,27 @@
 
 .header {
     padding-bottom: 10px;
-    padding-top: 5px;
+    padding-top: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
-}
+    justify-content: space-between;
 
-.header .header-title {
-    padding: 50px;
-    padding-right: 60px;
+}
+#time {
+    padding-right:60px;
+    padding-top:10px;
+    }
+
+.header .header-title button {
     float: left;
     font-size: 18px;    
+}
+
+
+.header .header-title{
+    padding-left: 60px;
+    padding-top:20px;
 }
 
 .header .header-title .highscore {
@@ -47,6 +57,49 @@
 .intro {
     padding: 20px;
     text-align: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.header-title p {
+    padding-right:10px;
+    float:right;
+}
+
+@media only screen and (max-width: 883px) {
+    .intro .start-content .start-text h1{
+        font-size: 30px;
+    }
+
+    .intro{
+        padding: 10px;
+    }
+
+    .intro .start-content .start-text p{
+        font-size: 15px;
+    }
+    #start {
+        border-radius: 12px;
+        padding:6px 22px;
+        font-size: 11px;
+    }
+
+    #view-scores, #time{
+        font-size: 11px;
+    }
+
+    .header .header-title {
+        padding: 20px;
+        padding-left: 10px;
+        float: left;
+        font-size: 18px;    
+    }
+
+    #time {
+    padding-right:2px;
+    padding-top:10px;
+    }
+    
 }
 
 .start-content, .start-button-class {
@@ -72,6 +125,7 @@
 .start-button-class .button:hover {
     background-color: var(--light-purple);
 }
+
 
 
 /* END START PAGE CONTENT STYLE */
