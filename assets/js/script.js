@@ -169,7 +169,6 @@ function displayScores() {
 function clearScores() {
     localStorage.clear();
     scoreArray.length = 0
-    alert(scoreArray.length);
     scoreList.innerHTML="";
 } 
 

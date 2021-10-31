@@ -99,6 +99,29 @@
     padding-right:2px;
     padding-top:10px;
     }
+
+    .questions-section{
+       padding-top:10%;
+       padding-left: 2%;
+       padding-right: 2%;
+    }
+    
+    #question {
+        background-color: red;
+        font-size: 20px;
+    }
+    
+    .questions-list li {
+        padding:2px;
+    }
+    
+    #answer1, #answer2, #answer3, #answer4 {
+        padding:2px;
+        font-size: 15px;
+        padding:6px 22px;
+    }
+
+
     
 }
 
@@ -131,16 +154,22 @@
 /* END START PAGE CONTENT STYLE */
 
 /* QUESTION STYLE */
+.questions-section{
+    flex-direction: column;
+    flex-wrap: wrap;
+   padding-top:80px;
+   padding-left: 150px;
+   padding-right: 150px;
+}
 
 #question {
     font-size: 40px;
-    padding-left: 100px;
     text-align: left;
 }
 
 .questions-list li {
     padding:4px;
-    padding-left: 100px;
+    list-style: none;
 }
 
 #answer1, #answer2, #answer3, #answer4 {
@@ -160,9 +189,8 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     border-width: 3px;
-    width:70%;
+    width:100%;
     color: grey;
-    text-align: center;
 }
 
 #answer-message {
@@ -171,6 +199,7 @@
     font-size: 30px;
     text-align: left;
     padding-left: 30px;
+    text-decoration: italic;
 
 
 
@@ -180,6 +209,14 @@
 
 /* ALL DONE SECTION STYLE */
 
+#final-score {
+    flex-direction: column;
+    flex-wrap: wrap;
+   padding-top:100px;
+   padding-left: 150px;
+   padding-right: 150px;
+
+}
 #final-score h2 {
     padding:10px;
     font-size: 50px;
@@ -217,14 +254,17 @@
 
 /* HIGHSCORES STYLE */
 
-.highscore-title h2 {
-    font-size: 50px;
+.highscore-title{
+    flex-direction: column;
+    flex-wrap: wrap;
+   padding-top:4%;
+   padding-left: 25%;
+   padding-right: 18%;
+   text-align: left;
 }
 
-.highscore-title {
-    padding:10px;
-    padding-left: 300px;
-    text-align: left;
+.highscore-title h2 {
+    font-size: 50px;
 }
 
 .highscore-title button {
