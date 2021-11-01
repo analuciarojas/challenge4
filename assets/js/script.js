@@ -173,6 +173,7 @@ function clearScores() {
 } 
 
 goBackBtn.addEventListener("click", function () {
+    
     highscores.style.display = "none";
     Intro.style.display = "block";
     time.style.display = "block";
@@ -184,7 +185,9 @@ goBackBtn.addEventListener("click", function () {
 
 viewScrBtn.addEventListener("click", function () {
         highscores.style.display = "block";
+        finalScore.style.display = "none";
         Intro.style.display = "none";
+        time.style.display = "none";
         viewScrBtn.style.display = "none";
     
 });

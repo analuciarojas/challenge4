@@ -90,13 +90,13 @@ const questions = [
 
 ## Preview
 
-This is the view of the coding quiz website in a computer view. 
+This is a preview of the coding quiz website in a computer view. 
 
-![Ana Lucia portfolio computer preview](assets/images/preview2.png)
+![Ana Lucia portfolio computer preview](assets/gif/preview.gif)
 
-This is the view of the coding quiz website in a cell phone view. 
+This is a preview of the coding quiz website in a cell phone view. 
 
-![Ana Lucia portfolio I Phone X preview](assets/images/preview1.png)
+![Ana Lucia portfolio I Phone X preview](assets/gif/preview1.gif)
 
 ## Links
 
